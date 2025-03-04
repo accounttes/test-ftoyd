@@ -1,0 +1,121 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 42px 0 42px;
+  background-color: #06080c;
+
+  .titleContainer {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    .select {
+      width: 170px;
+      height: 56px;
+      background-color: #0f1318;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      position: relative;
+      padding-right: 30px;
+
+      .text {
+        font-size: 16px;
+        font-weight: 400;
+        font-family: 'TacticSans';
+        color: #fff;
+      }
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: 400;
+      font-family: 'TacticSans';
+      color: #fff;
+      font-style: italic;
+    }
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .error {
+      width: 480px;
+      height: 56px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0f1318;
+    }
+
+    .refresh {
+      width: 204px;
+      height: 56px;
+      background-color: #eb0237;
+
+      .refreshContainer {
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        .rotating {
+          animation: spin 1s linear infinite;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    .titleContainer {
+      width: 100%;
+      flex-direction: column;
+      gap: 0;
+
+      .title {
+        font-size: 28px;
+      }
+
+      .select {
+        width: 100%;
+        max-width: 396px;
+      }
+    }
+
+    .buttons {
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-height: 120px;
+      align-items: flex-start;
+      margin-top: 15px;
+
+      .error,
+      .refresh {
+        border-radius: 5px;
+        width: 100%;
+        height: 56px;
+      }
+
+      .text {
+        font-size: 14px;
+      }
+    }
+  }
+}

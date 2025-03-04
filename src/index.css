@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'TacticSans';
+  src: url('./Tactic.Sans/TacticSans-Bld.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  color: white;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #06080C;
+}

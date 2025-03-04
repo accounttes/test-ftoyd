@@ -1,0 +1,214 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 87px;
+  border-radius: 5px;
+  justify-content: space-between;
+  background-color: #0b0e12;
+  margin: 12px 0;
+  padding: 14px;
+  transition: height 0.3s ease;
+
+  .team {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    background-color: #0b0e12;
+    gap: 14px;
+
+    .image {
+      height: 48px;
+      width: 48px;
+    }
+
+    .teamName {
+      padding-top: 15px;
+    }
+
+    .collapseButton {
+      border: none;
+      background-color: inherit;
+      box-shadow: none;
+      padding-top: 15px;
+    }
+
+    .collapseButton:hover {
+      background-color: inherit !important;
+      color: inherit !important;
+      border-color: inherit !important;
+    }
+  }
+
+  .score {
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    .status {
+      width: 92px;
+      height: 27px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.colContainer {
+  height: 168px;
+  width: 100%;
+  background-color: #0b0e12;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  padding: 0 28px;
+  gap: 32px;
+
+  .column {
+    margin: auto;
+    width: 874px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 112px;
+
+    .row2 {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      height: 52px;
+      background-color: #101318;
+    }
+
+    .row {
+      width: 100%;
+      height: 52px;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+
+      .player {
+        width: 33%;
+        .playerInfo {
+          display: flex;
+          justify-content: space-between;
+          height: 52px;
+          border-radius: 5px;
+          width: 100%;
+          padding: 0 10px;
+          background-color: #101318;
+
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 12px 10px;
+    margin: 8px 0;
+    width: 397px;
+    height: 60px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .team {
+      gap: 6px;
+
+      .image {
+        width: 28px;
+        height: 28px;
+      }
+
+      .teamName {
+        padding-top: 5px;
+        font-size: 14px;
+      }
+
+      .collapseButton {
+        font-size: 20px;
+        margin-top: 10px;
+        display: none;
+      }
+
+      .collapseButtonBottom {
+        font-size: 20px;
+        margin-top: 10px;
+        width: 100%;
+      }
+    }
+
+    .score {
+      gap: 8px;
+      .status {
+        width: 70px;
+        height: 23px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .colContainer {
+    flex-direction: column;
+    padding: 16px;
+    gap: 20px;
+    height: 300px;
+    width: 397px;
+
+    .vs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .column {
+      width: 100%;
+      gap: 8px;
+      margin: 0;
+    }
+
+    .row {
+      flex-direction: row;
+      height: auto !important;
+      gap: 8px;
+
+      .player {
+        width: 100%;
+        .playerInfo {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          height: 71px !important;
+          padding: 5px !important;
+        }
+
+        span {
+          font-size: 10px;
+        }
+      }
+    }
+
+    .row2 {
+      align-items: flex-start;
+      gap: 8px;
+      height: auto;
+    }
+  }
+}
